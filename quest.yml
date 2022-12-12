@@ -1,6 +1,6 @@
 id: circleci-configure
-title: CircleCI configure
-description: "We lately saw many changes that broke our unit tests in the frontend, so we want to run those tests with every change using CircleCI to make sure we don't break anything."
+title: Configuring CircleCI
+description: "Recently, we have had many changes that broke unit tests in our frontend, so we want to run those tests with every change using CircleCI to ensure they do not break."
 summary: "Summary"
 level: beginner
 steps:
@@ -12,7 +12,6 @@ steps:
 duration: 1
 skills:
 - circleci
-questDependency: docker_localsetup
 slogan: Starting slow
 resources:
 - name: circleci
