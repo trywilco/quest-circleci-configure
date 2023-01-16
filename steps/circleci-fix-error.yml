@@ -5,9 +5,9 @@ startFlow:
     params:
       person: keen
       messages:
-      - text: "OK, so seemse like it doesn't find the package.json in the frontend directory, so I guess it doesn't run the the right location"
+      - text: "OK, so seems like it doesn't find the package.json in the frontend directory, so I guess it doesn't run the the right location"
         delay: 1000
-      - text: "Can you try to make it run on the frontend directory? :instruction[Change it and push the code and see if the task running succefully]"
+      - text: "Can you try to make it run on the frontend directory? :instruction[Change it and push the code and see if the task running successfully]"
         delay: 1000
 trigger:
   type: circleci_event_received
