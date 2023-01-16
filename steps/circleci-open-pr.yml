@@ -1,4 +1,6 @@
 id: circleci-open-pr
+hints:
+  - "Try to use the `working_directory` property on your CircleCI config"
 startFlow:
   do:
   - actionId: bot_message
@@ -28,10 +30,16 @@ trigger:
                 regex: 'cd|prefix'
             then:
               do:
+              - actionId: bot_message
+                params:
+                  person: keen
+                  messages:
+                    - text: "Checkout all the project and then traveling in the directory might be buggy and maybe hurt caching, try another way"
+                      delay: 1300
               - actionId: github_pr_reject
                 params:
                   person: keen
-                  message: "Checout all the prject and then travling in the directory might be buggy and maybe hurt caching, try another way" 
+                  message: "Checkout all the project and then traveling in the directory might be buggy and maybe hurt caching, try another way"
                   messageName: cd
 
             else:
@@ -43,18 +51,30 @@ trigger:
                   regex: 'working_directory'
               then:
                 do:
+                - actionId: bot_message
+                  params:
+                    person: keen
+                    messages:
+                      - text: "Approved! Go ahead and merge this PR. Quickly now."
+                        delay: 1300
                 - actionId: github_pr_approve
                   params:
                     person: keen
                     message: "Approved! Go ahead and merge this PR. Quickly now."
               else:
                 do:
+                - actionId: bot_message
+                  params:
+                    person: keen
+                    messages:
+                      - text: "Seems like I'm missing how you made it work without setting the right working directory."
+                        delay: 1300
                 - actionId: github_pr_reject
                   params:
                     person: keen
-                    message: "Seems like I'm missing how you made it work without setting the right working directory" 
+                    message: "Seems like I'm missing how you made it work without setting the right working directory."
                     messageName: working_directory
-          
+
         github_pr_merged:
           do:
           - actionId: finish_step

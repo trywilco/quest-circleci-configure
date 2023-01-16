@@ -15,7 +15,7 @@ In this quest we'll configure circle ci on Anythink market
 Describe each step in the quest. 
 - Step 1: Configure a simple workflow to make sure circle ci is reading the configuration from the repo
 - Step 2: Go to CircleCI and re-run the task
-- Step 3: Codnfiure the workflow to run tests on the frontend
+- Step 3: Configure the workflow to run tests on the frontend
 - Step 4: Open a PR with the code changes.
 
 
@@ -37,8 +37,8 @@ Describe each step in the quest.
 #### Step 3: 
 - Learning Objective: CircleCI advanced configuration
 - Narrative: Now we need to configure this properly and make the workflow run the frontend tests
-- Instructions: Fix the errors from the prevoius step
-- How do users pass to the next step: The task running succefully
+- Instructions: Fix the errors from the previous step
+- How do users pass to the next step: The task running successfully
  
 #### Step 3: 
 - Learning Objective: CircleCI advanced configuration
